@@ -1,5 +1,6 @@
 import unittest
-from inheritance_animal import *;
+from inheritance_animal import *
+
 
 class DogTest(unittest.TestCase):
     def setUp(self):

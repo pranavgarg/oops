@@ -14,6 +14,11 @@ Methods to **gate** the way the data gets stored inside the class.
 
 Benefits
 - helps in removing duplicate code by allowing use of parent/base class to have common functions
+Things that can be achieved:
+ 1. Inherit a method: simply use the parent's class method
+ 2. Override : provide child's own version of method
+ 3. Extend : do work in addition to a parent class's method.
+ 4. Provide: implement a abstract method which a parent class provides
 
 ## POLYMORPHISM
 - two or more classes have the same interface(i.e. the method name)
