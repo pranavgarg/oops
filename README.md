@@ -27,6 +27,17 @@ Things that can be achieved:
 - **Duck Typing** refers to reading an object's attributes to decide whether it is of a proper type, rather than checking the type itself.
 e.g. len function called on tuple/list/dictionary 
 
+
+## Python Core Syntax Resolutions [a.k.a Magic methods]
+1. ```'abc' in var```   =>  ```var.__contains__('abc')```
+2. ```var == 'abc'```   =>  ```var.__eq__('abc')```
+3. ```var[1]``` => ```var.__getitem__(1)```
+4. ```var[1:3]``` => ```var.__getslice__(1,3)```
+5. ```a + v``` => ```a.__add__(b)```
+6. ```len(var)``` => ```var.__len__()```
+7. ```print var``` => ```var.__repr__()```
+
+
 Examples of each of the OOP are given in this repository for quick remembrance. 
 WIP
 1. design patterns

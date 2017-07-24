@@ -1,6 +1,9 @@
 import abc
 from datetime import datetime
 
+'''
+Using Inheritance to solve the problem
+'''
 
 class WriteFile(object):
 
@@ -21,9 +24,9 @@ class WriteFile(object):
 
 class LogFile(WriteFile):
 
-    def write(self, input):
+    def write(self, this_line):
         todays_date = datetime.now()
-        line = "{}    {}\n".format(todays_date.strftime('%Y-%m-%d %H:%M'), input)
+        line = "{0}    {1}".format(todays_date.strftime('%Y-%m-%d %H:%M'), this_line)
         self.write_line(line)
 
 class DelimFile(WriteFile):
@@ -32,7 +35,7 @@ class DelimFile(WriteFile):
         self.delim = delim
 
     def write(self, input):
-        line = "{}\n".format((self.delim).join(input))
+        line = "{0}".format((self.delim).join(input))
         self.write_line(line)
 
 log = LogFile('log.txt')
