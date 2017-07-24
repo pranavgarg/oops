@@ -42,3 +42,5 @@ Examples of each of the OOP are given in this repository for quick remembrance.
 WIP
 1. design patterns
 2. Useful coding patterns
+
+[Magic Methods Python](https://github.com/RafeKettler/magicmethods)
