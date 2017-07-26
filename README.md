@@ -44,3 +44,26 @@ WIP
 2. Useful coding patterns
 
 [Magic Methods Python](https://github.com/RafeKettler/magicmethods)
+
+Some useful methods like 
+- `with` helps doing the cleanup automatically when the function execution leaves the block
+  e.g. 
+  ```python
+    class MyClass(object):
+      def __enter__(self):
+          print ("we have entered `with`")
+          return self
+      def __exit__(self, type, value, traceback):
+          print ("we are leaving `with`")
+      def sayhi(self):
+          print ("hi instance %s"%(id(self)))
+      
+    with MyClass() as cc:
+      cc.sayhi()
+    
+    print ("after the `with` block")
+  ```
+  
+### Python classes
+[New style classes in python that inherit from `object`](http://python-history.blogspot.com/2010/06/inside-story-on-new-style-classes.html)
+  
