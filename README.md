@@ -64,6 +64,25 @@ Some useful methods like
     print ("after the `with` block")
   ```
   
+Many folks wonder whether Python has interfaces similar to like Java.
+Python in general doesnt support interface as it has multiple inheritance. 
+An `abstract` class is pretty much like a `interface`
+```python 2.7
+import abc
+class InterfaceExample(object):
+    __metaclass__ = abc.ABCMeta
+    @abc.abstractmethod
+    def __str__(self):
+        raise NotImplementedError('users must define __str__ to use this base class')
+```
+Python3 
+```python3
+import abc
+class InterfaceExample(object, metaclass=abc.ABCMeta):
+    @abc.abstractmethod
+    def __str__(self):
+        raise NotImplementedError('users must define __str__ to use this base class')
+```
 ### Python classes
 [New style classes in python that inherit from `object`](http://python-history.blogspot.com/2010/06/inside-story-on-new-style-classes.html)
   
